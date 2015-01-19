@@ -1,0 +1,172 @@
+@font-face {
+	font-family: 'cabrito_regular';
+	src: url('../fonts/insigne_-_cabrito-norreg-webfont.eot');
+	src: url('../fonts/insigne_-_cabrito-norreg-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/insigne_-_cabrito-norreg-webfont.woff2') format('woff2'),
+		 url('../fonts/insigne_-_cabrito-norreg-webfont.woff') format('woff'),
+		 url('../fonts/insigne_-_cabrito-norreg-webfont.ttf') format('truetype'),
+		 url('../fonts/insigne_-_cabrito-norreg-webfont.svg#cabrito_norm_regularnormRg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'cabrito_bold';
+	src: url('../fonts/insigne_-_cabrito-norbol-webfont.eot');
+	src: url('../fonts/insigne_-_cabrito-norbol-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/insigne_-_cabrito-norbol-webfont.woff2') format('woff2'),
+		 url('../fonts/insigne_-_cabrito-norbol-webfont.woff') format('woff'),
+		 url('../fonts/insigne_-_cabrito-norbol-webfont.ttf') format('truetype'),
+		 url('../fonts/insigne_-_cabrito-norbol-webfont.svg#cabrito_norm_boldnorm_bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	background: url('../img/fondo.jpg') repeat-x center top fixed;
+	font-family:'cabrito_regular', sans-serif;
+	font-size:13px;
+	padding:20px 0 0;
+	overflow-x:hidden
+}
+body.inicio {
+	background: url('../img/fondo-inicio.jpg') no-repeat center top fixed, #ac725d;
+	background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	-webkit-background-size: contain;
+}
+.content-a {
+	width:100%;
+	height:100%;
+    min-height:100%
+}
+.content-a {
+	display:table
+}
+.content-b {
+	display:table-cell;
+    position:relative;
+	vertical-align:middle;
+	text-align:center
+}
+strong {
+	font-family: 'cabrito_bold';
+}
+a,
+a:hover {
+	color:#000;
+	text-decoration:none
+}
+nav,
+.menu {
+	background:url('../img/ondas.png') repeat-x left bottom;
+	padding-bottom:22px;
+	margin-bottom:22px
+}
+ul.nav {
+	margin-top:30px;
+	list-style:none
+}
+ul.nav li {
+	
+}
+ul.nav li a {
+	font-size:20px;
+	color:#669933 !important
+}
+ul.nav li a:hover,
+ul.nav li.active a {
+	background-color:transparent !important;
+	font-style:italic;
+	color:#0f0f0f !important
+}
+.slider,
+.bloques,
+.menu {
+	margin-bottom:20px
+}
+.bloques {
+	margin:42px 0
+}
+.bloque-contacto,
+.bloque-outlet,
+.bloque-productos-ecologicos {
+	display:block;
+	width:100%;
+	max-width:249px;
+	height:250px;
+	
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.bloque-contacto {
+	background:url('../img/bloque-contacto.png') no-repeat 50% 50%
+}
+.bloque-contacto:hover {
+	background:url('../img/bloque-contacto-hover.png') no-repeat 50% 50%
+}
+.bloque-outlet {
+	background:url('../img/bloque-outlet.png') no-repeat 50% 50%
+}
+.bloque-outlet:hover {
+	background:url('../img/bloque-outlet-hover.png') no-repeat 50% 50%
+}
+.bloque-productos-ecologicos {
+	background:url('../img/bloque-productos-ecologicos.png') no-repeat 50% 50%
+}
+.bloque-productos-ecologicos:hover {
+	background:url('../img/bloque-productos-ecologicos-hover.png') no-repeat 50% 50%
+}
+.menu {
+	
+}
+.menu a {
+	display:block;
+	text-align:center;
+	color:#787878;
+	font-size:20px
+}
+.menu a:hover,
+.menu a.active:hover {
+	color:#000
+}
+footer {
+	font-size:11px
+}
+.inicio footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%
+}
+.inicio footer p,
+.inicio footer a {
+	color:#fff
+}
+.contenido p {
+	font-size:19px
+}
+.subtitulo {
+	color:#669933;
+	font-size:28px;
+	font-style:italic
+}
+
+@media (min-width:768px) and (max-width:991px) {
+	ul.nav li a {
+		font-size:16px
+	}
+	.nav>li>a {
+		padding:10px 6px
+	}
+	.navbar-brand>img {
+		width:85%
+	}
+}
