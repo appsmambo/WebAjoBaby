@@ -31,6 +31,18 @@
 		<![endif]-->
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<style>
+			@media (min-width:768px) {
+				.row {
+					display: table;
+				}
+				[class*="col-"] {
+					float: none;
+					display: table-cell;
+					vertical-align: top;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -61,7 +73,7 @@
 					<div class="col-sm-5">
 						<img src="img/quienes-somos.png" alt="" class="img-responsive center-block">
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-7 fondo-ondas2">
 						<p>
 							<br><br>
 							<span class="subtitulo">QUIÉNES SOMOS?</span>
@@ -75,7 +87,7 @@
 					<div class="col-sm-5">
 						<img src="img/precios-asequibles.png" alt="" class="img-responsive center-block">
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-7 fondo-ondas2">
 						<p>
 							<br><br>
 							<span class="subtitulo">PRECIOS ASEQUIBLES</span>
@@ -89,7 +101,7 @@
 					<div class="col-sm-5">
 						<img src="img/compromiso.ambiental.png" alt="" class="img-responsive center-block">
 					</div>
-					<div class="col-sm-7">
+					<div class="col-sm-7 fondo-ondas2">
 						<p>
 							<br><br>
 							<span class="subtitulo">COMPROMISO AMBIENTAL</span>
@@ -98,7 +110,11 @@
 						</p>
 					</div>
 				</div>
-				<br><br><br><br>
+				<br><br>
+			</section>
+			<section class="fondo-ondas">
+				<img src="img/gracias-por-visitarnos.png" alt="" class="img-responsive center-block">
+				<br><br>
 			</section>
 			<section class="bloques">
 				<div class="row">
@@ -134,7 +150,7 @@
 					</div>
 					<div class="col-sm-3">
 						<a href="#">
-							productos ecologicos
+							productos ecológicos
 						</a>
 					</div>
 					<div class="col-sm-2">
