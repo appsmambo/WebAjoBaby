@@ -139,7 +139,7 @@ ul.nav li.active a {
 	font-family:'cabrito_bold'
 }
 .menu a:hover,
-.menu a.active:hover {
+.menu a.active {
 	color:#787878
 }
 footer {

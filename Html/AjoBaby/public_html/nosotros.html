@@ -33,10 +33,10 @@
 		<script src="js/bootstrap.min.js"></script>
 		<style>
 			@media (min-width:768px) {
-				.row {
+				.row.ondas {
 					display: table;
 				}
-				[class*="col-"] {
+				.row.ondas [class*="col-"] {
 					float: none;
 					display: table-cell;
 					vertical-align: top;
@@ -60,7 +60,7 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><a href="nosotros.html">nosotros</a></li>
-							<li><a href="#">colecciones</a></li>
+							<li><a href="colecciones.html">colecciones</a></li>
 							<li><a href="#">productos ecológicos</a></li>
 							<li><a href="#">tienda online</a></li>
 						</ul>
@@ -69,7 +69,7 @@
 			</nav>
 			<section class="contenido">
 				<br><br>
-				<div class="row">
+				<div class="row ondas">
 					<div class="col-sm-5">
 						<img src="img/quienes-somos.png" alt="" class="img-responsive center-block">
 					</div>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<br><br><br>
-				<div class="row">
+				<div class="row ondas">
 					<div class="col-sm-5">
 						<img src="img/precios-asequibles.png" alt="" class="img-responsive center-block">
 					</div>
@@ -97,7 +97,7 @@
 					</div>
 				</div>
 				<br><br><br>
-				<div class="row">
+				<div class="row ondas">
 					<div class="col-sm-5">
 						<img src="img/compromiso.ambiental.png" alt="" class="img-responsive center-block">
 					</div>
@@ -139,12 +139,12 @@
 			<section class="menu">
 				<div class="row">
 					<div class="col-sm-2">
-						<a href="#">
+						<a class="active" href="nosotros.html">
 							nosotros
 						</a>
 					</div>
 					<div class="col-sm-2">
-						<a href="#">
+						<a href="colecciones.html">
 							colecciones
 						</a>
 					</div>
