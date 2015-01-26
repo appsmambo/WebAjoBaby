@@ -163,7 +163,88 @@ footer {
 	font-size:28px;
 	font-style:italic
 }
+.categoria {
+	font-size:28px;
+	font-family:'cabrito_bold';
+	font-style:italic;
+	margin-right:30px
+}
+.categoria:hover,
+.categoria.active {
+	color:#999999
+}
+.categoria:last-child {
+	margin-right:0
+}
+.submenu {
+	font-size:18px;
+	font-family:'cabrito_bold';
+	font-style:italic
+}
+.submenu:hover,
+.submenu:focus {
+	color:#999999
+}
+.coleccion {
+	display:block;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px
+}
+.coleccion img {
+	opacity:.25
+}
+.coleccion:hover img {
+	opacity:1
+}
+.coleccion:hover {
+	background-image:none
+}
+.coleccion.conjuntos {
+	background-image:url('../img/conjuntos.png')
+}
+.coleccion.jerseys {
+	background-image:url('../img/jerseys.png')
+}
+.coleccion.rebecas {
+	background-image:url('../img/rebecas.png')
+}
+.coleccion.camisetas {
+	background-image:url('../img/camisetas.png')
+}
+.coleccion.bodys {
+	background-image:url('../img/bodys.png')
+}
+.coleccion.peleles {
+	background-image:url('../img/peleles.png')
+}
+.coleccion.pantalones {
+	background-image:url('../img/pantalones.png')
+}
+.coleccion.patucos {
+	background-image:url('../img/patucos.png')
+}
+.coleccion.gorros {
+	background-image:url('../img/gorros.png')
+}
+.coleccion.capotas {
+	background-image:url('../img/capotas.png')
+}
+.coleccion.mantas {
+	background-image:url('../img/mantas.png')
+}
+.coleccion.canastillas {
+	background-image:url('../img/canastillas.png')
+}
 
+@media (min-width:768px) {
+	.tienda-online {
+		background:url('../img/tienda-online.png') no-repeat right top;
+		padding-right:28px !important
+	}
+}
 @media (min-width:768px) and (max-width:991px) {
 	ul.nav li a {
 		font-size:16px
