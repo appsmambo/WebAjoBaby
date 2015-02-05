@@ -85,10 +85,12 @@ ul.nav li.active a {
 }
 .slider,
 .bloques,
+.formas,
 .menu {
 	margin-bottom:20px
 }
-.bloques {
+.bloques,
+.formas {
 	margin:42px 0
 }
 .bloque-contacto,
@@ -127,6 +129,53 @@ ul.nav li.active a {
 }
 .bloque-productos-ecologicos:hover {
 	background:url('../img/bloque-productos-ecologicos-hover.png') no-repeat 50% 50%
+}
+.forma-contacto,
+.forma-outlet,
+.forma-productos-ecologicos {
+	display:block;
+	width:100%;
+	max-width:180px;
+	height:180px;
+	
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.forma-contacto {
+	background:url('../img/forma-contacto.png') no-repeat 50% 50%
+}
+.forma-contacto:hover {
+	background:url('../img/forma-contacto-hover.png') no-repeat 50% 50%
+}
+.forma-outlet {
+	background:url('../img/forma-outlet.png') no-repeat 50% 50%
+}
+.forma-outlet:hover {
+	background:url('../img/forma-outlet-hover.png') no-repeat 50% 50%
+}
+.forma-productos-ecologicos {
+	background:url('../img/forma-productos-ecologicos.png') no-repeat 50% 50%
+}
+.forma-productos-ecologicos:hover {
+	background:url('../img/forma-productos-ecologicos-hover.png') no-repeat 50% 50%
+}
+.formas div div {
+	border-left:1px solid #000;
+	border-right:1px solid #000
+}
+.formas div div:first-child {
+	border-left:none
+}
+.formas div div:last-child {
+	border-right:none
 }
 .menu {
 	
@@ -192,10 +241,7 @@ footer {
 .coleccion {
 	display:block;
 	background-position:50% 50%;
-	background-repeat:no-repeat;
-	-webkit-border-radius:6px;
-	-moz-border-radius:6px;
-	border-radius:6px
+	background-repeat:no-repeat
 }
 .coleccion img {
 	opacity:.25
