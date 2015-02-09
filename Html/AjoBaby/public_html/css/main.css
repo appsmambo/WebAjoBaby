@@ -74,7 +74,7 @@ ul.nav li {
 	
 }
 ul.nav li a {
-	font-size:20px;
+	font-size:18px;
 	color:#669933 !important
 }
 ul.nav li a:hover,
@@ -209,7 +209,7 @@ footer {
 	font-size:24px
 }
 .contenido p {
-	font-size:19px
+	font-size:18px
 }
 .subtitulo {
 	color:#669933;
@@ -230,9 +230,7 @@ footer {
 	margin-right:0
 }
 .submenu {
-	font-size:18px;
-	font-family:'cabrito_bold';
-	font-style:italic
+	font-size:19px
 }
 .submenu:hover,
 .submenu:focus {
@@ -290,6 +288,9 @@ footer {
 }
 
 @media (min-width:768px) {
+	.contenido p {
+		font-size:16px
+	}
 	.tienda-online {
 		background:url('../img/tienda-online.png') no-repeat right top;
 		padding-right:28px !important
@@ -303,7 +304,7 @@ footer {
 		padding:10px 6px
 	}
 	.navbar-brand>img {
-		width:85%
+		width:75%
 	}
 }
 @media (max-width:767px) {
