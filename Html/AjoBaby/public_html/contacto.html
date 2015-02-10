@@ -30,6 +30,9 @@
 		<![endif]-->
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.blockUI.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/contacto.js"></script>
 		<style>
 			@media (min-width:768px) {
 				.row.ondas {
@@ -67,14 +70,86 @@
 					</div>
 				</div>
 			</nav>
-			<section class="contenido">
+			<section class="contenido fondo-ondas2">
 				<br><br>
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<img src="img/contacto.jpg" alt="" class="img-responsive center-block">
+					<div class="col-sm-10 col-sm-offset-1 fondo-contacto">
+						<div class="row bordes">
+							<div class="col-sm-4">
+								<p>
+									c/el alcornoque, 19<br>11350<br>Castellar de la Frontera<br>(Cádiz)
+								</p>
+							</div>
+							<div class="col-sm-4">
+								<p>
+									<a href="mailto:info@ajobaby.com">info@ajobaby.com</a><br>+34 956 647 267<br>+34 657 282 200<br>
+								</p>
+							</div>
+							<div class="col-sm-4">
+								<p>
+									horario de atención al cliente<br>de 9 a 14h / 15 a 18h
+								</p>
+							</div>
+						</div>
+						<p>
+							<br><br><br><br>
+						</p>
+						<form id="form-contacto" class="form-horizontal" action="#" method="post">
+							<div class="form-group">
+								<label for="nombre" class="col-sm-3 col-sm-offset-1 control-label">nombre*</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control inputbox" id="nombre" name="nombre" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-sm-3 col-sm-offset-1 control-label">email*</label>
+								<div class="col-sm-5">
+									<input type="email" class="form-control inputbox" id="email" name="email" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="telefono" class="col-sm-3 col-sm-offset-1 control-label">tfno*</label>
+								<div class="col-sm-5">
+									<input type="tel" class="form-control inputbox" id="telefono" name="telefono" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="mensaje" class="col-sm-3 col-sm-offset-1 control-label">tfno*</label>
+								<div class="col-sm-5">
+									<textarea id="mensaje" name="mensaje inputbox" class="form-control" rows="3" required></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="privacidad" class="col-sm-9 col-sm-offset-1 control-label">
+									<input type="checkbox" name="privacidad" id="privacidad">
+									leo y acepto las condiciones de privacidad de ajobaby.com* &nbsp;&nbsp; <button type="submit" class="btn btn-default btn-sm btn-contacto" id="enviar">enviar</button>
+								</label>
+							</div>
+						</form>
+						<p>
+							<br><br><br><br>
+						</p>
 					</div>
 				</div>
+				<span class="hidden-xs">
+					<br><br><br><br>
+				</span>
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<p>
+							<strong>Atención al cliente:</strong> si tienes cualquier duda respecto a productos o servicios de nuestra tienda on-line envianos un e-mail a nuestro correo <a class="contacto" href="mailto:info@ajobaby.com">info@ajobaby.com</a> explicando tu consulta. Esta será resuelta lo antes posible.
+							<br>
+							Gracias.
+						</p>
+					</div>
+				</div>
+				<span class="hidden-xs">
+					<br><br>
+				</span>
 			</section>
+			<span class="hidden-xs">
+				<br><br>
+			</span>
 			<div class="clearfix"></div>
 			<section class="menu">
 				<div class="row">

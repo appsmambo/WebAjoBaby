@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'cabrito_regular';
+	font-family:'cabrito_regular';
 	src: url('../fonts/insigne_-_cabrito-norreg-webfont.eot');
 	src: url('../fonts/insigne_-_cabrito-norreg-webfont.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/insigne_-_cabrito-norreg-webfont.woff2') format('woff2'),
@@ -10,7 +10,7 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: 'cabrito_bold';
+	font-family:'cabrito_bold';
 	src: url('../fonts/insigne_-_cabrito-norbol-webfont.eot');
 	src: url('../fonts/insigne_-_cabrito-norbol-webfont.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/insigne_-_cabrito-norbol-webfont.woff2') format('woff2'),
@@ -21,18 +21,18 @@
 	font-style: normal;
 }
 body {
-	background: url('../img/fondo.jpg') repeat-x center top fixed;
+	background:url('../img/fondo.jpg') repeat-x center top fixed;
 	font-family:'cabrito_regular', sans-serif;
 	font-size:13px;
 	padding:20px 0 0;
 	overflow-x:hidden
 }
 body.inicio {
-	background: url('../img/fondo-inicio.jpg') no-repeat center top fixed, #ac725d;
-	background-size: contain;
-	-moz-background-size: contain;
-	-o-background-size: contain;
-	-webkit-background-size: contain;
+	background:url('../img/fondo-inicio.jpg') no-repeat center top fixed, #ac725d;
+	background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	-webkit-background-size:contain;
 }
 .content-a {
 	width:100%;
@@ -167,15 +167,31 @@ ul.nav li.active a {
 .forma-productos-ecologicos:hover {
 	background:url('../img/forma-productos-ecologicos-hover.png') no-repeat 50% 50%
 }
-.formas div div {
+.formas div div,
+.bordes div {
 	border-left:1px solid #000;
 	border-right:1px solid #000
 }
-.formas div div:first-child {
+.formas div div:first-child,
+.bordes div:first-child {
 	border-left:none
 }
-.formas div div:last-child {
+.formas div div:last-child,
+.bordes div:last-child {
 	border-right:none
+}
+.bordes {
+	padding-top:20px
+}
+.bordes div {
+	padding-top:20px;
+	padding-bottom:20px;
+	height:110px;
+	max-height:110px
+}
+.bordes p {
+	font-size:14px!important;
+	font-family:'cabrito_bold'
 }
 .menu {
 	
@@ -286,7 +302,23 @@ footer {
 .coleccion.canastillas {
 	background-image:url('../img/canastillas.png')
 }
-
+.fondo-contacto {
+	background:url('../img/fondo-contacto.jpg') no-repeat center top;
+	background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	-webkit-background-size:cover
+}
+label {
+	font-size:15px
+}
+.btn-contacto {
+	background-color:#b3b3b3;
+	color:#000
+}
+a.contacto {
+	color:#c1272c
+}
 @media (min-width:768px) {
 	.contenido p {
 		font-size:16px
