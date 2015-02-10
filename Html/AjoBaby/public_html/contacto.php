@@ -3,35 +3,51 @@
 if (empty($_POST))
 	die('error');
 
-/*
- * localhost
- */
-/*$hostname = 'localhost';
-$username = 'root';
-$password = 'desarr0ll0';
-$db_name  = 'ripley_plataforma';*/
-
-/*
- * servidor
- */
-$hostname = 'localhost';
-$username = 'xxx';
-$password = 'xxx';
-$db_name  = 'xxx';
-
 $nombre = ucwords(strtolower($_POST['nombre']));
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
-$info = $_POST['info'];
+$mensaje = $_POST['mensaje'];
 $ip = $_SERVER['REMOTE_ADDR'];
 
-try {
-	$dbh = new PDO("mysql:host=$hostname;dbname=$db_name", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));
-	$count = $dbh->exec("INSERT INTO TABLA(nombre, email, telefono, info, ip) VALUES ('$nombre', '$email', '$telefono', '$info', '$ip')");
-    echo 'OK';
-    $dbh = null;
-} catch (PDOException $e) {
-	echo 'error';
-	error_log($e->getMessage(), 0);
-}
+$mailHtml = 'Nuevo mensaje desde la web:<br><br>'
+		. 'Nombre: ' . $nombre . '<br>'
+		. 'Email: ' . $email . '<br>'
+		. 'Telefono: ' . $telefono . '<br>'
+		. 'Mensaje: ' . $mensaje . '<br>'
+		. 'IP: ' . $ip;
 
+$mailText = 'Nuevo mensaje desde la web:'."\r\n\r\n"
+		. 'Nombre: ' . $nombre . "\r\n"
+		. 'Email: ' . $email . "\r\n"
+		. 'Telefono: ' . $telefono . "\r\n"
+		. 'Mensaje: ' . $mensaje . "\r\n"
+		. 'IP: ' . $ip;
+// 
+
+require 'phpmailer/PHPMailerAutoload.php';
+$mail = new PHPMailer;
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+/*
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = '';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = '';                 // SMTP username
+$mail->Password = '';                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 25; //587;                                    // TCP port to connect to
+*/
+$mail->From = 'info@ajobaby.com';
+$mail->FromName = 'AjoBaby';
+$mail->addAddress('info@ajobaby.com');
+$mail->addReplyTo('info@ajobaby.com', 'Contacto AjoBaby');
+$mail->isHTML(true);                                  // Set email format to HTML
+$mail->Subject = 'Contacto AjoBaby';
+$mail->Body    = $mailHtml;
+$mail->AltBody = $mailText;
+
+if(!$mail->send()) {
+	echo 'Message could not be sent.';
+	echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+	echo 'OK';
+}

@@ -13,12 +13,19 @@ $(document).ready(function() {
 				email:true
 			},
 			telefono: {
+				required:true,
 				number:true
+			},
+			mensaje : {
+				required:true
+			},
+			privacidad: {
+				required:true
 			}
 		},
 		messages: {
 			nombre: {
-				required: "Ingrese su nombre y apellidos",
+				required: "Ingrese su nombre completo",
 				nombre: "Ingrese su nombre correctamente"
 			},
 			email: {
@@ -26,7 +33,14 @@ $(document).ready(function() {
 				email: "Ingrese su email correctamente"
 			},
 			telefono: {
+				required: "Ingrese su teléfono",
 				number: "Ingrese su teléfono correctamente"
+			},
+			mensaje: {
+				required: "Ingrese su mensaje"
+			},
+			privacidad: {
+				required: "&nbsp;&nbsp;*&nbsp;&nbsp;"
 			}
 		},
 		submitHandler: function(form) {
@@ -38,23 +52,24 @@ $(document).ready(function() {
 				success: function(res) {
 					console.log(res);
 					if (res == 'OK') {
-						$('.fondo-contacto').block({css: {width:'300px', border: 'none', padding: '15px', backgroundColor: '#000', '-webkit-border-radius': '10px', '-moz-border-radius': '10px', opacity: .9, color: '#fff'}, message: 'Gracias, sus datos han sido registrados.'});
+						$('.fondo-contacto').block({css: {width:'300px', border: 'none', padding: '18px', backgroundColor: '#000', '-webkit-border-radius': '10px', '-moz-border-radius': '10px', opacity: .9, color: '#fff'}, message: 'Gracias, sus datos han sido registrados.'});
 						setTimeout(function() {
 							$('.inputbox').val('');
-							$('#enviar').unblock({
+							$('.fondo-contacto').unblock({
 								onUnblock: function() {
 								}
 							});
 						}, 3000);
 					} else {
-						$('.fondo-contacto').block({css: {width:'300px', border: 'none', padding: '15px', backgroundColor: '#000', '-webkit-border-radius': '10px', '-moz-border-radius': '10px', opacity: .9, color: '#fff'}, message: 'Vuelva a intentarlo.'});
+						$('.fondo-contacto').block({css: {width:'300px', border: 'none', padding: '18px', backgroundColor: '#000', '-webkit-border-radius': '10px', '-moz-border-radius': '10px', opacity: .9, color: '#fff'}, message: 'Vuelva a intentarlo.'});
 						setTimeout(function() {
-							$('#enviar').unblock({
+							$('.fondo-contacto').unblock({
 								onUnblock: function() {
 								}
 							});
 						}, 3000);
 					}
+					$('#enviar').prop('disabled', '');
 				},
 				dataType: 'text'
 			});

@@ -312,6 +312,13 @@ footer {
 label {
 	font-size:15px
 }
+label.error {
+	font-size:12px;
+	color:red
+}
+#privacidad + label.error {
+	font-size:20px
+}
 .btn-contacto {
 	background-color:#b3b3b3;
 	color:#000
